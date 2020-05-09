@@ -3,10 +3,10 @@ project-name: Slick Tab Navigation
 meta-title: Cities
 ---
 
-<nav class="nav-tabbar" id="navTabbar">
+<nav class="nav-tabbar" id="navTabbar" role="navigation">
   <ul class="nav-tabbar-links">
     {{#each nav-links.cities}}
-    <li class="nav-tabbar-item" data-time-zone="{{zone}}">
+    <li class="nav-tabbar-item" data-time-zone="{{zone}}" aria-label="">
       <a href="{{link}}">{{label}}</a>
       <span class="local-time"></span>
     </li>
@@ -14,11 +14,3 @@ meta-title: Cities
     <div class="nav-tabbar-underline"></div>
   </ul>
 </nav>
-
-
-
-
-<!-- TODO:
-- accessibility
-- mobile time
-- Styleguide -->

@@ -13,6 +13,7 @@ if (timZoneCheck) {
       let localTime = getTimeByZone(timeZone);
 
       zone.querySelector('.local-time').innerText = localTime.time;
+      zone.setAttribute('aria-label', 'local time is ' + localTime.time);
     });
   }
 
