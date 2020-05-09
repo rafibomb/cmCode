@@ -3,37 +3,44 @@
     {
       "section": "cupertino",
       "label": "Cupertino",
-      "link": "#"
+      "link": "#",
+      "zone": "America/Los_Angeles"
     },
     {
       "section": "new-york-city",
       "label": "New York City",
-      "link": "#"
+      "link": "#",
+      "zone": "America/New_York"
     },
     {
       "section": "london",
       "label": "London",
-      "link": "#"
+      "link": "#",
+      "zone": "Europe/London"
     },
     {
       "section": "amsterdam",
       "label": "Amsterdam",
-      "link": "#"
+      "link": "#",
+      "zone": "Europe/Amsterdam"
     },
     {
       "section": "tokyo",
       "label": "Tokyo",
-      "link": "#"
+      "link": "#",
+      "zone": "Asia/Tokyo"
     },
     {
       "section": "hong-kong",
       "label": "Hong Kong",
-      "link": "#"
+      "link": "#",
+      "zone": "Asia/Hong_Kong"
     },
     {
       "section": "sydney",
       "label": "Sydney",
-      "link": "#"
+      "link": "#",
+      "zone": "Australia/Sydney"
     }
   ]
 }
