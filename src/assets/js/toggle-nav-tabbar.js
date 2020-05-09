@@ -1,4 +1,3 @@
-// play with cool timings
 // add local times in separate file
 
 (function () {
