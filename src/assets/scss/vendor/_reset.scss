@@ -377,6 +377,12 @@
     font-family: inherit;
   }
 
+  ul {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+  }
+
   // Internal classes to show/hide elements in JavaScript
   .is-visible {
     display: block !important;

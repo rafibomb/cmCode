@@ -4,6 +4,7 @@
 
 $nav-tabbar-link-spacing: 4.8vw;
 $nav-tabbar-active-link-color: $body-font-color;
+$nav-tabbar-breakpoint: 625px;
 
 .nav-tabbar {
   @include push-center;
@@ -12,25 +13,35 @@ $nav-tabbar-active-link-color: $body-font-color;
   position: relative;
 
   &::after {
+    @include horizontal-center;
+    background-color: $border-color;
+    bottom: 0;
     content: '';
     height: 1px;
-    background-color: $border-color;
-    width: 90vw;
-    @include horizontal-center;
-    bottom: 0;
+    width: 100vw;
     z-index: -1;
+  }
+
+  @include breakpoint(825px) {
+    &::after {
+      width: 90vw;
+    }
   }
 }
 
 .nav-tabbar-links {
   list-style: none;
-  padding-inline-start: 0;
-  margin-block-start: 0;
-  margin-block-end: 0;
+  width: 100%;
+
+  @include breakpoint($nav-tabbar-breakpoint) {
+    width: auto;
+  }
 }
 
 .nav-tabbar-item {
-  display: inline-block;
+  display: block;
+  text-align: center;
+
   > a {
     @include transition(color);
     color: $gray100;
@@ -48,17 +59,32 @@ $nav-tabbar-active-link-color: $body-font-color;
     }
   }
 
-  & + .nav-tabbar-item {
-    margin-left: $nav-tabbar-link-spacing;
+  @include breakpoint($nav-tabbar-breakpoint) {
+    display: inline-block;
+
+    & + .nav-tabbar-item {
+      margin-left: $nav-tabbar-link-spacing/2;
+    }
+  }
+
+  @include breakpoint(825px) {
+    & + .nav-tabbar-item {
+      margin-left: $nav-tabbar-link-spacing;
+    }
   }
 }
 
 .nav-tabbar-underline {
   @include transition(width 0.45s ease-in-out, left 0.45s ease-in-out);
+  display: none;
+  background-color: $nav-tabbar-active-link-color;
+  bottom: 0;
   height: 1px;
   left: 0;
-  bottom: 0;
   position: absolute;
   width: 72px;
-  background-color: $nav-tabbar-active-link-color;
+
+  @include breakpoint($nav-tabbar-breakpoint) {
+    display: block;
+  }
 }
