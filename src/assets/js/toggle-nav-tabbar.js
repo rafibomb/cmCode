@@ -26,11 +26,7 @@ if (navTabbar) {
     links[i].addEventListener('click', handleLinkClick);
   }
 
-  window.addEventListener('resize', () => {
-    for (var i = 0; i < links.length; i++) {
-      watchActiveWidth(i);
-    }
-  });
+  window.addEventListener('resize', watchActiveWidth);
 
   // ---------------
   // functions
@@ -40,10 +36,12 @@ if (navTabbar) {
     setActive(links[0]);
   }
 
-  function watchActiveWidth(i) {
-    if (links[i].classList.contains('is-active')) {
-      underline.style.left = links[i].getBoundingClientRect().left + 'px';
-      underline.style.width = links[i].clientWidth + 'px';
+  function watchActiveWidth() {
+    for (var i = 0; i < links.length; i++) {
+      if (links[i].classList.contains('is-active')) {
+        underline.style.left = links[i].getBoundingClientRect().left + 'px';
+        underline.style.width = links[i].clientWidth + 'px';
+      }
     }
   }
 
