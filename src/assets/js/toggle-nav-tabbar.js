@@ -1,5 +1,4 @@
 // separate out functions
-// set active on first without click
 // play with cool timings
 // change left to translateX
 // add resize event to update widths
