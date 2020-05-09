@@ -1,4 +1,13 @@
+# Hi CM team!
+
+I hosted a preview of this component here: [https://critical.netlify.app](https://critical.netlify.app)
+
+Let me know if any questions come up!
+hello@raficode.com
+
 # Project Starter Template
+
+Welcome to my starter project template.
 
 [![devDependency Status](https://david-dm.org/zurb/foundation-zurb-template/dev-status.svg)](https://david-dm.org/zurb/foundation-zurb-template#info=devDependencies)
 
@@ -28,14 +37,19 @@ git clone git@github.com:rafibomb/gulp-sass-handlebars-template.git your_project
 
 2. If you cloned, return (skip this step) :) Else if you downloaded, unzip and rename the file to your project name.
 
-3. Then open the folder in your command line, and install the needed dependencies:
+3. Then open the folder in your command line:
 
 ```bash
 cd your_project_name
+```
+
+4. Install the needed dependencies:
+
+```bash
 yarn
 ```
 
-4. Run `yarn start` to run Gulp. Your compiled site will be created in a folder called `dist`, viewable at this URL:
+5. Run `yarn start` to run Gulp. Your compiled site will be created in a folder called `dist`, viewable at this URL:
 
 ```
 http://localhost:8000
@@ -49,26 +63,4 @@ To create compressed, production-ready assets, run `yarn run build`.
 
 ## Dev Dependencies
 
-#### SVG injector
-
-[npm](https://www.npmjs.com/package/svg-injector)
-
-We are using SVG injector to allow SVG's to be manipulated with CSS from a simple `<img>` tag. Pretty neat!
-
-**Usage**
-Add the `inject-svg` attribute to any `img` where you'd need to manipulate with CSS.
-
-`<img inject-svg src="{{root}}assets/img/icons/test-icon.svg" alt="test icon">`
-
-This will apply the `.injected-svg` class to the SVG. Any class you add to the img tag will be applied to the SVG.
-
----
-
-#### AOS (Animate on Scroll)
-
-[Website](https://michalsnik.github.io/aos/)
-
-**Usage**
-Add `data-aos` along with an animation name to an element. Delay is set in ms.
-
-`<div data-aos="fade-up" data-aos-delay="50"></div>`
+No 3rd party dependencies needed on this one.
