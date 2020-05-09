@@ -31,18 +31,21 @@ if (navTabbar) {
   // ---------------
 
   function init() {
-    links[0].classList.add('is-active');
-    underline.style.left = links[0].getBoundingClientRect().left + 'px';
-    underline.style.width = links[0].clientWidth + 'px';
+    setActive(links[0]);
+  }
+
+  function setActive(link) {
+    link.classList.add('is-active');
+    underline.style.left = link.getBoundingClientRect().left + 'px';
+    underline.style.width = link.clientWidth + 'px';
   }
 
   function handleLinkClick() {
     for (var j = 0; j < links.length; j++) {
       links[j].classList.remove('is-active');
     }
-    this.classList.add('is-active');
-    underline.style.width = this.clientWidth + 'px';
-    underline.style.left = this.getBoundingClientRect().left + 'px';
+    setActive(this);
   }
+
   init();
 }
