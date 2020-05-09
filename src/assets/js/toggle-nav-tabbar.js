@@ -13,7 +13,7 @@ if (navTabbar) {
   // variables
   // ---------------
 
-  let links, underline;
+  let links, underline, activeLink;
 
   links = document.querySelectorAll('.nav-tabbar-links .nav-tabbar-item');
   underline = document.querySelector('.nav-tabbar-underline');
@@ -24,8 +24,13 @@ if (navTabbar) {
 
   for (var i = 0; i < links.length; i++) {
     links[i].addEventListener('click', handleLinkClick);
-    window.addEventListener('resize', watchActiveWidth);
   }
+
+  window.addEventListener('resize', () => {
+    for (var i = 0; i < links.length; i++) {
+      watchActiveWidth(i);
+    }
+  });
 
   // ---------------
   // functions
