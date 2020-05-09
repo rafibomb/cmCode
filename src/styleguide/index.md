@@ -1,174 +1,6 @@
-# The Grid
-
-<p class="lead">Problem: You've got tons of content, each needing different sized cells, and don't know how to quick and easily get it all done. Solution: The awesome XY grid!</p>
-
----
-
-## Overview
-
-The grid is built around two key elements: grid-x and cells. grid-container create a max-width and contain the grid, and cells create the final structure. Everything on your page that you don't give a specific structural style to should be within a grid-x or cell.
-
----
-
-## Nesting
-
-In the Grid you can nest cells down as far as you'd like. Just embed grid-x inside cells and go from there. Each embedded grid-x can contain up to 12 cells.
-
----
-
-## How to Use
-
-Using this framework is easy. Here's how your code will look when you use a series of `<div>` tags to create cells.
-
-```html
-<div class="grid-x grid-padding-x">
-  <div class="small-6 medium-4 large-3 cell">...</div>
-  <div class="small-6 medium-8 large-9 cell">...</div>
-</div>
-```
-
-<div class="grid-x grid-padding-x display">
-  <div class="small-12 large-4 cell">4</div>
-  <div class="small-12 large-4 cell">4</div>
-  <div class="small-12 large-4 cell">4</div>
-</div>
-<div class="grid-x grid-padding-x display">
-  <div class="small-12 large-3 cell">3</div>
-  <div class="small-12 large-6 cell">6</div>
-  <div class="small-12 large-3 cell">3</div>
-</div>
-<div class="grid-x grid-padding-x display">
-  <div class="small-12 large-2 cell">2</div>
-  <div class="small-12 large-8 cell">8</div>
-  <div class="small-12 large-2 cell">2</div>
-</div>
-<div class="grid-x grid-padding-x display">
-  <div class="small-12 large-3 cell">3</div>
-  <div class="small-12 large-9 cell">9</div>
-</div>
-<div class="grid-x grid-padding-x display">
-  <div class="small-12 large-4 cell">4</div>
-  <div class="small-12 large-8 cell">8</div>
-</div>
-<div class="grid-x grid-padding-x display">
-  <div class="small-12 large-5 cell">5</div>
-  <div class="small-12 large-7 cell">7</div>
-</div>
-<div class="grid-x grid-padding-x display">
-  <div class="small-12 large-6 cell">6</div>
-  <div class="small-12 large-6 cell">6</div>
-</div>
-
----
-
-## Nesting grid-x
-
-In the Grid you can nest cells down as far as you'd like. Just embed grid-x inside cells and go from there. Each embedded grid-x can contain up to 12 cells.
-
-```html
-<div class="grid-x  grid-padding-x">
-  <div class="small-8 cell">8
-    <div class="grid-x grid-padding-x">
-      <div class="small-8 cell">8 Nested
-        <div class="grid-x grid-padding-x">
-          <div class="small-8 cell">8 Nested Again</div>
-          <div class="small-4 cell">4</div>
-        </div>
-      </div>
-      <div class="small-4 cell">4</div>
-    </div>
-  </div>
-  <div class="small-4 cell">4</div>
-</div>
-```
-
-<div class="grid-x  grid-padding-x display">
-  <div class="small-8 cell">8
-    <div class="grid-x  grid-padding-x">
-      <div class="small-8 cell">8 Nested
-        <div class="grid-x grid-padding-x">
-          <div class="small-8 cell">8 Nested Again</div>
-          <div class="small-4 cell">4</div>
-        </div>
-      </div>
-      <div class="small-4 cell">4</div>
-    </div>
-  </div>
-  <div class="small-4 cell">4</div>
-</div>
-
----
-
-## Small Grid
-
-As you've probably noticed in the examples above, you have access to a small, medium, and large grid. If you know that your grid structure will be the same for small devices as it will be on large devices, just use the small grid. You can override your small grid classes by adding medium or large grid classes.
-
-```html
-<div class="grid-x grid-padding-x">
-  <div class="small-2 cell">2</div>
-  <div class="small-10 cell">10, last</div>
-</div>
-<div class="grid-x grid-padding-x">
-  <div class="small-3 cell">3</div>
-  <div class="small-9 cell">9, last</div>
-</div>
-```
-
-<div class="grid-x grid-padding-x display">
-  <div class="small-2 cell">2</div>
-  <div class="small-10 cell">10, last</div>
-</div>
-<div class="grid-x grid-padding-x display">
-  <div class="small-3 cell">3</div>
-  <div class="small-9 cell">9, last</div>
-</div>
-
-
-
-# Colors
-
-<p class="lead">Below you can find the different values we created that support the primary color variable you can change at any time in <code>\_settings.scss</code></p>
-
----
-
-<div class="grid-x grid-margin-x grid-margin-y small-up-1 medium-up-3 large-up-5">
-  <div class="cell">
-    <div class="color-block">
-      <span style="background: #2199e8"></span>
-      #2199e8
-    </div>
-  </div>
-  <div class="cell">
-    <div class="color-block">
-      <span style="background: #3adb76"></span>
-      #3adb76
-    </div>
-  </div>
-  <div class="cell">
-    <div class="color-block">
-      <span style="background: #ffae00"></span>
-      #ffae00
-    </div>
-  </div>
-  <div class="cell">
-    <div class="color-block">
-      <span style="background: #ec5840"></span>
-      #ec5840
-    </div>
-  </div>
-  <div class="cell">
-    <div class="color-block">
-      <span style="background: #0a0a0a"></span>
-      #0a0a0a
-    </div>
-  </div>
-</div>
-
-
-
 # Typography
 
-<p class="lead">This design uses Helvetica Neue for headings and paragraph text.</p>
+<p class="lead">This design uses San Francisco for headings and paragraph text.</p>
 
 ---
 
@@ -208,8 +40,6 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quibusdam ratione 
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quibusdam ratione sunt dolorum, qui illo maxime doloremque accusantium cum libero eum, a optio odio placeat debitis ullam aut non distinctio.
 
-
-
 # Buttons
 
 <p class="lead">Buttons are tied to an action of some kind, whether that button is on a cheese dispenser or launches the rocket that you're strapped to. On the web, we follow similar conventions.</p>
@@ -239,8 +69,6 @@ These buttons are used for less important, secondary actions on a page.
 <a href="#" class="secondary small button">Small button</a>
 <a href="#" class="secondary tiny button">Tiny button</a>
 ```
-
-
 
 # Forms
 
@@ -330,15 +158,15 @@ Form elements in Foundation are styled based on their type attribute rather than
 </form>
 ```
 
-
-
 # Checkbox & Radio
 
 Associated files:
-- *_custom-global-variables.scss*
-- *_checkbox.scss*
+
+- _\_custom-global-variables.scss_
+- _\_checkbox.scss_
 
 Associated Custom Variables:
+
 ```scss
 $checkbox-label-offset: 1.75rem;
 $checkbox-size: rem-calc(20);
@@ -346,7 +174,7 @@ $checkbox-check-size: rem-calc(15);
 $checkbox-border-color: $border-color;
 $checkbox-bg: $off-white;
 $checkbox-selected-bg: $off-white;
-$checkbox-icon: url("../img/icons/checkmark-icon.svg");
+$checkbox-icon: url('../img/icons/checkmark-icon.svg');
 ```
 
 Checkboxes and Radios are custom styled. Setting them up is super easy:
@@ -372,12 +200,21 @@ Checkboxes and Radios are custom styled. Setting them up is super easy:
 <br>
 
 ```html
-<input id="newsletterOptin" type="checkbox" checked>
-<label for="newsletterOptin">Please confirm that you agree to receive some rad newsletters via email.</label>
+<input id="newsletterOptin" type="checkbox" checked />
+<label for="newsletterOptin"
+  >Please confirm that you agree to receive some rad newsletters via
+  email.</label
+>
 
 <!-- aligned to top -->
-<input id="newsletterOptin" type="checkbox" checked>
-<label class="checkbox-align-top" for="newsletterOptin">Please confirm that you agree to receive some rad newsletters via email. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores illum et provident animi commodi similique explicabo perferendis. Similique rerum ratione itaque, molestiae, sequi molestias aperiam quas minima recusandae ullam incidunt.</label>
+<input id="newsletterOptin" type="checkbox" checked />
+<label class="checkbox-align-top" for="newsletterOptin"
+  >Please confirm that you agree to receive some rad newsletters via email.
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores illum et
+  provident animi commodi similique explicabo perferendis. Similique rerum
+  ratione itaque, molestiae, sequi molestias aperiam quas minima recusandae
+  ullam incidunt.</label
+>
 ```
 
 ---
@@ -405,22 +242,18 @@ Checkboxes and Radios are custom styled. Setting them up is super easy:
 ```html
 <label>Choose Your Favorite</label>
 <div>
-  <input type="radio" id="huey" name="drone" value="huey" checked>
+  <input type="radio" id="huey" name="drone" value="huey" checked />
   <label for="huey">Huey</label>
 </div>
 <div>
-  <input type="radio" id="dewey" name="drone" value="dewey">
+  <input type="radio" id="dewey" name="drone" value="dewey" />
   <label for="dewey">Dewey</label>
 </div>
 <div>
-  <input type="radio" id="louie" name="drone" value="louie">
+  <input type="radio" id="louie" name="drone" value="louie" />
   <label for="louie">Louie</label>
 </div>
 ```
-
-
-
-
 
 # New Section
 
@@ -431,9 +264,6 @@ Checkboxes and Radios are custom styled. Setting them up is super easy:
 <a href="#" class="button">Button</a>
 <a href="#" class="button">Button</a>
 ```
-
-
-
 
 # Sass Mixins
 
@@ -480,7 +310,7 @@ Creates a rounded image. Default sizes are `tiny`, `small`, `medium`, `large`.
 
 ### Container border
 
-Used to create a consistent border or divider style. You can pass in a default box shadow by setting $shadow to true.
+Used to create a consistent border or divider style. You can pass in a default box shadow by setting \$shadow to true.
 
 **Useage:**
 
@@ -609,8 +439,7 @@ Scrolling containers with shadows can be achieved using the scrollbox mixin.
 
 ### Sidelines
 
-This mixin creates a pattern for horizontal lines on the sides of an element. *Default variables can be found in the mixins > `_sidelines.scss` file.*
-
+This mixin creates a pattern for horizontal lines on the sides of an element. _Default variables can be found in the mixins > `_sidelines.scss` file._
 
 Usage as a class:
 
@@ -677,11 +506,12 @@ This mixins makes it easy to apply CSS colors to your SVG's. You will need to pa
 
 ### Transition
 
-Using this transition mixin will not only save writing CSS properties by hand but also add some consistency in timing and easing. *Note: you only need to apply the transition on the element itself for it to work in both directions, not the state of the element like :hover.*
+Using this transition mixin will not only save writing CSS properties by hand but also add some consistency in timing and easing. _Note: you only need to apply the transition on the element itself for it to work in both directions, not the state of the element like :hover._
 
 For better performance, avoid using `all` as the transition property.
 
 Defaults:
+
 ```scss
 // Default values
 $property: all; // all is a fallback but you should define a property for better performance
@@ -763,7 +593,7 @@ Store you z-index's in the Sass map. You 'll find it in mixins > `_zindex.scss`.
 $z-layers: (
   app-sidebar: 11,
   app-frame: 4000,
-  modal: 4001
+  modal: 4001,
 );
 ```
 
