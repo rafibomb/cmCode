@@ -30,11 +30,7 @@ if (timZoneCheck) {
     let year = new Date(localDateString).getFullYear();
     let customTimeString = date + ' ' + month + ',' + year;
 
-    let time = now
-      .toLocaleTimeString('en-US', { timeZone, hour12: false })
-      .substring(0, 5);
-
-    console.log('timeZone', timeZone);
+    let time = now.toLocaleTimeString('en-US', { timeZone, hour12: true });
 
     return { date: customTimeString, time };
   }
