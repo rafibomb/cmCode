@@ -2,12 +2,11 @@
 // Sliding underline navigation
 // ----------------------------
 
-$nav-tabbar-link-spacing: rem-calc(68);
+$nav-tabbar-link-spacing: 4.8vw;
 $nav-tabbar-active-link-color: $body-font-color;
 
 .nav-tabbar {
   @include push-center;
-  // border-bottom: 1px solid $border-color;
   display: flex;
   justify-content: center;
   position: relative;

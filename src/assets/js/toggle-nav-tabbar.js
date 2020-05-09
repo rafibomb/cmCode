@@ -24,6 +24,7 @@ if (navTabbar) {
 
   for (var i = 0; i < links.length; i++) {
     links[i].addEventListener('click', handleLinkClick);
+    window.addEventListener('resize', watchActiveWidth);
   }
 
   // ---------------
@@ -32,6 +33,13 @@ if (navTabbar) {
 
   function init() {
     setActive(links[0]);
+  }
+
+  function watchActiveWidth(i) {
+    if (links[i].classList.contains('is-active')) {
+      underline.style.left = links[i].getBoundingClientRect().left + 'px';
+      underline.style.width = links[i].clientWidth + 'px';
+    }
   }
 
   function setActive(link) {
