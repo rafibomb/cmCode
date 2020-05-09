@@ -1,5 +1,3 @@
-// add local times in separate file
-
 (function () {
   const navTabbar = document.getElementById('navTabbar');
 
@@ -8,7 +6,7 @@
     // variables
     // ---------------
 
-    let links, underline, activeLink;
+    let links, underline;
 
     links = document.querySelectorAll('.nav-tabbar-links .nav-tabbar-item');
     underline = document.querySelector('.nav-tabbar-underline');
