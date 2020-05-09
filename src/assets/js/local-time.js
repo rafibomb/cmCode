@@ -1,30 +1,40 @@
-function setTime() {
-  let timelist = document.querySelectorAll('.nav-tabbar-item');
+const timZoneCheck = document.querySelectorAll('[data-time-zone]');
 
-  timelist.forEach((zone) => {
-    let timeZone = zone.getAttribute('data-time-zone');
-    let localTime = getTimeByZone(timeZone);
+if (timZoneCheck) {
+  // ---------------
+  // functions
+  // ---------------
 
-    zone.querySelector('.local-time').innerText = localTime.time;
-  });
-}
+  function setTime() {
+    let timelist = document.querySelectorAll('.nav-tabbar-item');
 
-setInterval(setTime, 1000);
+    timelist.forEach((zone) => {
+      let timeZone = zone.getAttribute('data-time-zone');
+      let localTime = getTimeByZone(timeZone);
 
-function getTimeByZone(timeZone) {
-  let now = new Date(Date.now());
-  let month = now
-    .toLocaleDateString('en-US', { timeZone, month: 'long' })
-    .substring(0, 3);
-  let localDateString = now.toLocaleDateString('en-US', { timeZone });
+      zone.querySelector('.local-time').innerText = localTime.time;
+    });
+  }
 
-  let date = new Date(localDateString).getDate();
-  let year = new Date(localDateString).getFullYear();
-  let customTimeString = date + ' ' + month + ',' + year;
+  setInterval(setTime, 1000);
 
-  let time = now
-    .toLocaleTimeString('en-US', { timeZone, hour12: false })
-    .substring(0, 5);
+  function getTimeByZone(timeZone) {
+    let now = new Date(Date.now());
+    let month = now
+      .toLocaleDateString('en-US', { timeZone, month: 'long' })
+      .substring(0, 3);
+    let localDateString = now.toLocaleDateString('en-US', { timeZone });
 
-  return { date: customTimeString, time };
+    let date = new Date(localDateString).getDate();
+    let year = new Date(localDateString).getFullYear();
+    let customTimeString = date + ' ' + month + ',' + year;
+
+    let time = now
+      .toLocaleTimeString('en-US', { timeZone, hour12: false })
+      .substring(0, 5);
+
+    console.log('timeZone', timeZone);
+
+    return { date: customTimeString, time };
+  }
 }
