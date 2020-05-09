@@ -1,0 +1,23 @@
+---
+project-name: Slick Tab Navigation
+meta-title: Home
+---
+
+<nav class="nav-tabbar" id="navTabbar">
+  <ul class="nav-tabbar-links">
+    {{#each nav-links.cities}}
+    <li class="nav-tabbar-item" data-section="{{section}}">
+      <a href="{{link}}">{{label}}</a>
+    </li>
+    {{/each}}
+    <div class="nav-tabbar-underline"></div>
+  </ul>
+</nav>
+
+
+
+
+<!-- TODO:
+- favicon
+- accessibility
+- Styleguide -->

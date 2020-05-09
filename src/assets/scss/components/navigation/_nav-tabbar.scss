@@ -1,0 +1,65 @@
+// ----------------------------
+// Sliding underline navigation
+// ----------------------------
+
+$nav-tabbar-link-spacing: rem-calc(68);
+$nav-tabbar-active-link-color: $body-font-color;
+
+.nav-tabbar {
+  @include push-center;
+  // border-bottom: 1px solid $border-color;
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  &::after {
+    content: '';
+    height: 1px;
+    background-color: $border-color;
+    width: 90vw;
+    @include horizontal-center;
+    bottom: 0;
+    z-index: -1;
+  }
+}
+
+.nav-tabbar-links {
+  list-style: none;
+  padding-inline-start: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.nav-tabbar-item {
+  display: inline-block;
+  > a {
+    @include transition(color);
+    color: $gray100;
+    display: block;
+    padding: rem-calc(10 0);
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  &.is-active {
+    > a {
+      color: $nav-tabbar-active-link-color;
+    }
+  }
+
+  & + .nav-tabbar-item {
+    margin-left: $nav-tabbar-link-spacing;
+  }
+}
+
+.nav-tabbar-underline {
+  @include transition(width 0.45s ease-in-out, left 0.45s ease-in-out);
+  height: 1px;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  width: 72px;
+  background-color: $nav-tabbar-active-link-color;
+}
