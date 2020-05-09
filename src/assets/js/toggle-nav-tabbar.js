@@ -22,6 +22,10 @@ if (navTabbar) {
   // events
   // ---------------
 
+  for (var i = 0; i < links.length; i++) {
+    links[i].addEventListener('click', handleLinkClick);
+  }
+
   // ---------------
   // functions
   // ---------------
@@ -32,15 +36,13 @@ if (navTabbar) {
     underline.style.width = links[0].clientWidth + 'px';
   }
 
-  for (var i = 0; i < links.length; i++) {
-    links[i].addEventListener('click', function () {
-      for (var j = 0; j < links.length; j++) {
-        links[j].classList.remove('is-active');
-      }
-      this.classList.add('is-active');
-      underline.style.width = this.clientWidth + 'px';
-      underline.style.left = this.getBoundingClientRect().left + 'px';
-    });
+  function handleLinkClick() {
+    for (var j = 0; j < links.length; j++) {
+      links[j].classList.remove('is-active');
+    }
+    this.classList.add('is-active');
+    underline.style.width = this.clientWidth + 'px';
+    underline.style.left = this.getBoundingClientRect().left + 'px';
   }
   init();
 }
