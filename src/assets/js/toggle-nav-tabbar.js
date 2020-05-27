@@ -15,9 +15,9 @@
     // events
     // ---------------
 
-    for (var i = 0; i < links.length; i++) {
-      links[i].addEventListener('click', handleLinkClick);
-    }
+    links.forEach((link, index) => {
+      link.addEventListener('click', handleLinkClick);
+    });
 
     window.addEventListener('resize', watchActiveWidth);
 
@@ -30,12 +30,12 @@
     }
 
     function watchActiveWidth() {
-      for (var i = 0; i < links.length; i++) {
-        if (links[i].classList.contains('is-active')) {
-          underline.style.left = links[i].getBoundingClientRect().left + 'px';
-          underline.style.width = links[i].clientWidth + 'px';
+      links.forEach((link, index) => {
+        if (link.classList.contains('is-active')) {
+          underline.style.left = link.getBoundingClientRect().left + 'px';
+          underline.style.width = link.clientWidth + 'px';
         }
-      }
+      });
     }
 
     function setActive(link) {
@@ -45,9 +45,9 @@
     }
 
     function handleLinkClick() {
-      for (var j = 0; j < links.length; j++) {
-        links[j].classList.remove('is-active');
-      }
+      links.forEach((link, index) => {
+        link.classList.remove('is-active');
+      });
       setActive(this);
     }
 
