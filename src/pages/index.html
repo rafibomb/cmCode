@@ -3,12 +3,21 @@ project-name: Slick Tab Navigation
 meta-title: Cities
 ---
 
+<header class="hero">
+  <div class="hero-background"></div>
+
+  <div class="local-time">
+    {{#each nav-links.cities}}
+    <span class="{{section}}" data-time-zone="{{zone}}" aria-label=""></span>
+    {{/each}}
+  </div>
+</header>
+
 <nav class="nav-tabbar" id="navTabbar" role="navigation">
   <ul class="nav-tabbar-links">
     {{#each nav-links.cities}}
-    <li class="nav-tabbar-item" data-time-zone="{{zone}}" aria-label="">
+    <li class="nav-tabbar-item" data-city-label="{{section}}">
       <a href="{{link}}">{{label}}</a>
-      <span class="local-time"></span>
     </li>
     {{/each}}
     <div class="nav-tabbar-underline"></div>

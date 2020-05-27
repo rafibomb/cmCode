@@ -55,24 +55,9 @@ $nav-tabbar-breakpoint: 625px;
     }
   }
 
-  > .local-time {
-    @include horizontal-center;
-    @include transition(opacity 0.55s);
-    bottom: -6px;
-    color: darken($gray100, 20%);
-    font-size: 12px;
-    opacity: 0;
-    white-space: nowrap;
-    text-transform: lowercase;
-  }
-
   &.is-active {
     > a {
       color: $nav-tabbar-active-link-color;
-    }
-
-    > .local-time {
-      opacity: 1;
     }
   }
 
@@ -82,10 +67,6 @@ $nav-tabbar-breakpoint: 625px;
 
     & + .nav-tabbar-item {
       margin-left: $nav-tabbar-link-spacing/2;
-    }
-
-    > .local-time {
-      bottom: -29px;
     }
   }
 

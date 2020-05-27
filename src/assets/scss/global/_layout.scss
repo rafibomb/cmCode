@@ -35,6 +35,114 @@
   }
 }
 
-body {
-  padding-top: 20vh;
+.hero {
+  height: 60vh;
+  position: relative;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@500&display=swap');
+
+.local-time {
+  position: absolute;
+  left: 3rem;
+  @include transition(opacity 0.55s);
+  bottom: 3rem;
+  font-size: 12px;
+  white-space: nowrap;
+  text-transform: lowercase;
+
+  > span {
+    font-family: 'Changa', sans-serif;
+    display: none;
+    font-size: 50px;
+    color: $white;
+  }
+
+  .cupertino & {
+    .cupertino {
+      animation: fade-in 0.5s ease;
+      display: inline;
+    }
+  }
+
+  .new-york-city & {
+    .new-york-city {
+      animation: fade-in 0.5s ease;
+      display: inline;
+    }
+  }
+
+  .london & {
+    .london {
+      animation: fade-in 0.5s ease;
+      display: inline;
+    }
+  }
+
+  .amsterdam & {
+    .amsterdam {
+      animation: fade-in 0.5s ease;
+      display: inline;
+    }
+  }
+
+  .tokyo & {
+    .tokyo {
+      animation: fade-in 0.5s ease;
+      display: inline;
+    }
+  }
+
+  .hong-kong & {
+    .hong-kong {
+      animation: fade-in 0.5s ease;
+      display: inline;
+    }
+  }
+
+  .sydney & {
+    .sydney {
+      animation: fade-in 0.5s ease;
+      display: inline;
+    }
+  }
+}
+
+.hero-background {
+  background-color: $gray500;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  @include transition(background-image 1s);
+
+  .cupertino & {
+    background-image: url(https://s.hdnux.com/photos/71/76/75/15200089/7/940x0.jpg);
+  }
+
+  .new-york-city & {
+    background-image: url(https://images.pexels.com/photos/378570/pexels-photo-378570.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260);
+  }
+
+  .london & {
+    background-image: url(https://images.pexels.com/photos/1796715/pexels-photo-1796715.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260);
+  }
+
+  .amsterdam & {
+    background-image: url(https://images.pexels.com/photos/1796705/pexels-photo-1796705.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260);
+  }
+
+  .tokyo & {
+    background-image: url(https://images.pexels.com/photos/2067057/pexels-photo-2067057.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260);
+  }
+
+  .hong-kong & {
+    background-image: url(https://images.pexels.com/photos/3038813/pexels-photo-3038813.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260);
+  }
+
+  .sydney & {
+    background-image: url(https://images.pexels.com/photos/995764/pexels-photo-995764.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260);
+  }
 }

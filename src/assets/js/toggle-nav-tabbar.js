@@ -6,10 +6,11 @@
     // variables
     // ---------------
 
-    let links, underline;
+    let links, underline, hero;
 
     links = document.querySelectorAll('.nav-tabbar-links .nav-tabbar-item');
     underline = document.querySelector('.nav-tabbar-underline');
+    hero = document.querySelector('.hero');
 
     // ---------------
     // events
@@ -40,6 +41,8 @@
 
     function setActive(link) {
       link.classList.add('is-active');
+      let locationClass = link.getAttribute('data-city-label').toLowerCase();
+      hero.className = `hero ${locationClass}`;
       underline.style.left = link.getBoundingClientRect().left + 'px';
       underline.style.width = link.clientWidth + 'px';
     }

@@ -7,13 +7,13 @@
     // ---------------
 
     function setTime() {
-      let timelist = document.querySelectorAll('.nav-tabbar-item');
+      let timelist = document.querySelectorAll('.local-time span');
 
       timelist.forEach((zone) => {
         let timeZone = zone.getAttribute('data-time-zone');
         let localTime = getTimeByZone(timeZone);
 
-        zone.querySelector('.local-time').innerText = localTime.time;
+        zone.innerText = localTime.time;
         zone.setAttribute('aria-label', 'local time is ' + localTime.time);
       });
     }
